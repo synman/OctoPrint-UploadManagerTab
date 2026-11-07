@@ -7,6 +7,26 @@ window into its own **Upload Manager** tab, so your printer's files stay one cli
 covering the page. It adds no new file features. Printing, moving and removing files all work the way
 OctoPrint already does them.
 
+## Screenshots
+
+**Stock OctoPrint 2.0**
+
+![Upload Manager tab on stock OctoPrint 2.0](docs/images/live20-tab.png)
+
+![Upload Manager Tab settings on stock OctoPrint 2.0](docs/images/live20-settings.png)
+
+**OctoPrint 1.11.8 with UI Customizer, on a CNC machine**
+
+![Upload Manager tab on a CNC machine](docs/images/qbp-octo-tab.png)
+
+![Upload Manager Tab settings on a CNC machine](docs/images/qbp-octo-settings.png)
+
+**OctoPrint 1.11.8 with UI Customizer, on a laser**
+
+![Upload Manager tab on a laser](docs/images/atom-octo-tab.png)
+
+![Upload Manager Tab settings on a laser](docs/images/atom-octo-settings.png)
+
 ## Prerequisites
 
 - OctoPrint 1.11.0 or newer. Tested on 1.11.8 and 2.0.0rc5 (proof: `tests/uploadmanagertab-probe.py` run on each). Other versions are expected to work but are not tested.
@@ -49,6 +69,7 @@ octoprint_uploadmanagertab/   the plugin package
   static/css/uploadmanagertab.css
   templates/                  the settings form (the tab template is empty by design)
 docs/                         operator, install, troubleshooting and glossary guides
+docs/images/                  screenshots used in this file
 tests/uploadmanagertab-probe.py   live browser probe (development only)
 pyproject.toml, setup.py, MANIFEST.in   packaging
 ```
