@@ -42,4 +42,5 @@ release exists.
 3. Confirm, then restart OctoPrint if it asks.
 
 After removal, the Upload Manager opens as the pop-up dialog again, as OctoPrint ships it. Your files are not touched,
-because this plugin stores none. Each browser keeps its remembered view.
+because this plugin stores none. Its settings stay in OctoPrint's config until you use the **Cleanup** tab in Plugin
+Manager. Each browser keeps its remembered view.
