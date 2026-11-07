@@ -1,0 +1,112 @@
+#plugin_uploadmanager_dialog.uploadmanagertab-docked {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+}
+
+/* Fill vertical: the height is set inline from JS; the list scrolls inside .table-wrapper. */
+#plugin_uploadmanager_dialog.uploadmanagertab-docked.uploadmanagertab-fill-vertical {
+    min-height: 320px;
+}
+
+#plugin_uploadmanager_dialog.uploadmanagertab-docked > .modal-header,
+#plugin_uploadmanager_dialog.uploadmanagertab-docked > .modal-footer {
+    display: none;
+}
+
+#plugin_uploadmanager_dialog.uploadmanagertab-docked > .modal-body {
+    flex: 1 1 auto;
+    max-height: none;
+    padding: 0;
+    position: relative;
+    overflow: visible;
+}
+
+#plugin_uploadmanager_dialog.uploadmanagertab-docked.uploadmanagertab-fill-vertical > .modal-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+}
+
+#plugin_uploadmanager_dialog.uploadmanagertab-docked .full-sized-box {
+    padding: 0;
+}
+
+#plugin_uploadmanager_dialog.uploadmanagertab-docked.uploadmanagertab-fill-vertical .full-sized-box {
+    flex: 1 1 auto;
+    min-height: 0;
+}
+
+#plugin_uploadmanager_dialog.uploadmanagertab-docked .table-wrapper {
+    overflow: visible;
+}
+
+#plugin_uploadmanager_dialog.uploadmanagertab-docked.uploadmanagertab-fill-vertical .table-wrapper {
+    overflow: hidden auto;
+    flex: 1 1 auto;
+    min-height: 0;
+}
+
+#plugin_uploadmanager_dialog.uploadmanagertab-docked .btn-toolbar {
+    flex-wrap: wrap;
+    row-gap: 5px;
+}
+
+#plugin_uploadmanager_dialog.uploadmanagertab-docked td.uploaded,
+#plugin_uploadmanager_dialog.uploadmanagertab-docked td.printed,
+#plugin_uploadmanager_dialog.uploadmanagertab-docked th.uploaded,
+#plugin_uploadmanager_dialog.uploadmanagertab-docked th.printed {
+    white-space: nowrap;
+}
+
+#plugin_uploadmanager_dialog.uploadmanagertab-docked td.uploaded,
+#plugin_uploadmanager_dialog.uploadmanagertab-docked th.uploaded,
+#plugin_uploadmanager_dialog.uploadmanagertab-docked td.printed,
+#plugin_uploadmanager_dialog.uploadmanagertab-docked th.printed {
+    width: 125px;
+}
+
+/* Columns: a hidden column loses both its header and its cells. */
+#plugin_uploadmanager_dialog.uploadmanagertab-docked.uploadmanagertab-no-uploaded th.uploaded,
+#plugin_uploadmanager_dialog.uploadmanagertab-docked.uploadmanagertab-no-uploaded td.uploaded,
+#plugin_uploadmanager_dialog.uploadmanagertab-docked.uploadmanagertab-no-printed th.printed,
+#plugin_uploadmanager_dialog.uploadmanagertab-docked.uploadmanagertab-no-printed td.printed,
+#plugin_uploadmanager_dialog.uploadmanagertab-docked.uploadmanagertab-no-size th.size,
+#plugin_uploadmanager_dialog.uploadmanagertab-docked.uploadmanagertab-no-size td.size {
+    display: none;
+}
+
+#files_wrapper .accordion-heading-button.uploadmanagertab-inactive {
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+#files_wrapper .accordion-heading-button.uploadmanagertab-hidden {
+    display: none;
+}
+
+/* The bundled header bar is near-white in every theme, so its text must be dark in every theme. */
+#plugin_uploadmanager_dialog.uploadmanagertab-docked thead th,
+#plugin_uploadmanager_dialog.uploadmanagertab-docked thead th span {
+    color: #333;
+}
+
+/* A selected row's theme background can clash with the success and error filename colors. */
+#plugin_uploadmanager_dialog.uploadmanagertab-docked tbody tr.info td,
+#plugin_uploadmanager_dialog.uploadmanagertab-docked tbody tr.info td i {
+    color: #111;
+}
+
+/* A theme may paint disabled buttons brighter than enabled ones. */
+#plugin_uploadmanager_dialog.uploadmanagertab-docked .btn-toolbar .btn.disabled {
+    background-color: transparent;
+    background-image: none;
+    opacity: 0.4;
+}

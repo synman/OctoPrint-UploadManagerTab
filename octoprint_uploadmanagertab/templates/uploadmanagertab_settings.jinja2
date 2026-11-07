@@ -1,0 +1,81 @@
+<form class="form-horizontal">
+    <div class="control-group">
+        <div class="controls">
+            <label class="checkbox" for="settings-uploadmanagertab-fill-horizontal">
+                <input type="checkbox" id="settings-uploadmanagertab-fill-horizontal"
+                       data-bind="checked: settings.plugins.uploadmanagertab.fill_horizontal">
+                {{ _('Fill horizontal') }}
+            </label>
+            <span class="help-block">{{ _('Stretch the file list to the inner edges of the tab.') }}</span>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+            <label class="checkbox" for="settings-uploadmanagertab-fill-vertical">
+                <input type="checkbox" id="settings-uploadmanagertab-fill-vertical"
+                       data-bind="checked: settings.plugins.uploadmanagertab.fill_vertical">
+                {{ _('Fill vertical') }}
+            </label>
+            <span class="help-block">{{ _('Fit the file list to the window height and scroll inside it. Off: the page scrolls instead.') }}</span>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="settings-uploadmanagertab-hide-pattern">{{ _('Hide by pattern') }}</label>
+        <div class="controls">
+            <input type="text" id="settings-uploadmanagertab-hide-pattern" class="input-xlarge"
+                   data-bind="value: settings.plugins.uploadmanagertab.hide_pattern">
+            <span class="help-block">{{ _('Comma-separated names to hide; * matches any text, e.g. @eaDir, *.tmp. Applies to this tab only, not the Files panel or the copy dialog.') }}</span>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+            <label class="checkbox" for="settings-uploadmanagertab-remember-view">
+                <input type="checkbox" id="settings-uploadmanagertab-remember-view"
+                       data-bind="checked: settings.plugins.uploadmanagertab.remember_view">
+                {{ _('Remember view') }}
+            </label>
+            <span class="help-block">{{ _('Reopen the last folder, storage and list style when you come back.') }}</span>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+            <label class="checkbox" for="settings-uploadmanagertab-show-uploaded">
+                <input type="checkbox" id="settings-uploadmanagertab-show-uploaded"
+                       data-bind="checked: settings.plugins.uploadmanagertab.show_uploaded">
+                {{ _('Show Uploaded column') }}
+            </label>
+            <span class="help-block">{{ _('The date each file was uploaded.') }}</span>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+            <label class="checkbox" for="settings-uploadmanagertab-show-printed">
+                <input type="checkbox" id="settings-uploadmanagertab-show-printed"
+                       data-bind="checked: settings.plugins.uploadmanagertab.show_printed">
+                {{ _('Show Last Printed column') }}
+            </label>
+            <span class="help-block">{{ _('The date the file was last printed.') }}</span>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+            <label class="checkbox" for="settings-uploadmanagertab-show-size">
+                <input type="checkbox" id="settings-uploadmanagertab-show-size"
+                       data-bind="checked: settings.plugins.uploadmanagertab.show_size">
+                {{ _('Show Size column') }}
+            </label>
+            <span class="help-block">{{ _('The file size, or the total for a folder.') }}</span>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="settings-uploadmanagertab-files-icon">{{ _('Files panel icon') }}</label>
+        <div class="controls">
+            <select id="settings-uploadmanagertab-files-icon"
+                    data-bind="value: settings.plugins.uploadmanagertab.files_icon">
+                <option value="gray">{{ _('Disable while this tab is open') }}</option>
+                <option value="hide">{{ _('Hide') }}</option>
+            </select>
+            <span class="help-block">{{ _('The folder icon in the Files panel that opens this tab.') }}</span>
+        </div>
+    </div>
+</form>
