@@ -4,7 +4,7 @@ Use this guide to install, check, upgrade and remove the Upload Manager Tab plug
 
 ## Prerequisites
 
-- OctoPrint 1.11.0 or newer. Tested on 1.11.8 and 2.0.0rc5.
+- OctoPrint 1.11.0 or newer. Tested on 1.11.8 and 2.0.0rc5. Other versions are expected to work but are not tested.
 - The bundled **Upload Manager** plugin enabled. It ships with OctoPrint. This plugin moves its window
   into a tab, so without it the tab stays empty.
 - The OctoPrint host can reach `github.com` to download the plugin.
@@ -31,8 +31,9 @@ If neither appears, see [troubleshooting.md](troubleshooting.md).
 
 ## Upgrade
 
-OctoPrint's **Software Update** plugin reads the update information this plugin publishes, which points to
-its GitHub releases. Use Software Update to move to a newer release.
+OctoPrint's **Software Update** plugin checks this plugin's GitHub releases, whichever way you installed it. When a
+release newer than your version exists, it offers the update. It reports an error for this plugin until the first
+release exists.
 
 ## Uninstall
 
@@ -40,4 +41,5 @@ its GitHub releases. Use Software Update to move to a newer release.
 2. Find **Upload Manager Tab** in the list and click its **Uninstall Plugin** button.
 3. Confirm, then restart OctoPrint if it asks.
 
-After removal, the Upload Manager opens as the pop-up dialog again, as OctoPrint ships it.
+After removal, the Upload Manager opens as the pop-up dialog again, as OctoPrint ships it. Your files are not touched,
+because this plugin stores none. Each browser keeps its remembered view.

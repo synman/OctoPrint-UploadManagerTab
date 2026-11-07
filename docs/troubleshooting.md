@@ -17,7 +17,7 @@ window is not there to move.
 **Fix.**
 
 1. Go to **Settings > Plugin Manager** and confirm the bundled **Upload Manager** plugin is enabled.
-2. Reload the OctoPrint page. Use a hard reload if the old page is cached.
+2. Reload the OctoPrint page. Use a hard reload (Ctrl+Shift+R, or Cmd+Shift+R on a Mac) if the old page is cached.
 3. Open the browser console (F12) and look for the line above. If it is still there after steps 1 and 2,
    report it with your OctoPrint version.
 
@@ -44,13 +44,13 @@ The default is `@eaDir`.
 
 ## A setting does not seem to apply
 
-**Cause.** Settings are saved from the Settings dialog. A browser that has the page open may show an old
-state, and **Remember view** is stored in each browser.
+**Cause.** A change shows at once, but only **Save** keeps it. **Close** without saving undoes it. **Remember view**
+is stored in each browser.
 
 **Fix.**
 
 1. Click **Save** in the Settings dialog after changing a value.
-2. Reload the OctoPrint page.
+2. If it still looks wrong, reload the OctoPrint page.
 3. For the folder and list style, check **Remember view** is on. A different browser starts fresh.
 4. For the Files panel folder icon, check the **Files panel icon** setting. **Disable while this tab is open**
    greys the icon while the tab is showing. **Hide** removes it.

@@ -9,7 +9,7 @@ OctoPrint already does them.
 
 ## Prerequisites
 
-- OctoPrint 1.11.0 or newer. Tested on 1.11.8 and 2.0.0rc5.
+- OctoPrint 1.11.0 or newer. Tested on 1.11.8 and 2.0.0rc5 (proof: `tests/uploadmanagertab-probe.py` run on each). Other versions are expected to work but are not tested.
 - The bundled **Upload Manager** plugin enabled (it ships with OctoPrint).
 
 ## Install
@@ -38,7 +38,7 @@ Something not right? See [docs/troubleshooting.md](docs/troubleshooting.md). Unf
 - **Hide by pattern** applies to this tab only. The Files panel and the copy dialog still show every file.
 - **Remember view** is stored in each browser, not on the printer. A new browser or a cleared browser
   starts from OctoPrint's default view.
-- The Files panel and the copy dialog are unchanged.
+- Apart from its folder icon, the Files panel is unchanged. The copy dialog is unchanged.
 
 ## Project structure
 
@@ -60,17 +60,22 @@ The probe drives a running OctoPrint with a headless Chromium browser through Pl
 ```
 pip install playwright
 playwright install chromium
-UMT_BASE=http://127.0.0.1:5097 UMT_RIG=~/octoprint-rigs/live20 python3 tests/uploadmanagertab-probe.py
+UMT_BASE=http://127.0.0.1:5000 UMT_RIG=<folder holding an apikey file> python3 tests/uploadmanagertab-probe.py
 ```
 
 - `UMT_BASE` is the URL of the OctoPrint instance under test.
-- `UMT_RIG` is the directory that holds that instance's `apikey` file.
+- `UMT_RIG` is the folder that holds a text file named `apikey` with that instance's API key.
+- The probe creates test files and folders, changes settings and restores them, so point it at a test instance, never a printer in use.
 - `UMT_ONLY` (optional) is a comma list of check numbers to run.
 
 The probe prints one PASS or FAIL line per check and exits non-zero on any FAIL.
 
 To build an installable zip, run `python3 -m py_compile octoprint_uploadmanagertab/*.py setup.py`
 and then zip the repository, excluding `.git`, under one top folder.
+
+## Keeping the docs current
+
+Update `docs/operators-guide.md` when `get_settings_defaults` or the settings template changes. Update the tested versions here and in `docs/install-guide.md` after running the probe on a new OctoPrint release.
 
 ## Contributing
 

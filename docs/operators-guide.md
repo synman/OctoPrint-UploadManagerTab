@@ -17,20 +17,21 @@ Use it to:
 - Check when a file was uploaded or last printed.
 - Move or remove an old test print.
 
-The Files panel and the copy dialog work as before.
+Apart from its folder icon, the Files panel works as before. So does the copy dialog.
 
 ## Open the tab
 
 1. Click the **Upload Manager** tab at the top of OctoPrint.
-2. Or click the folder icon in the Files panel. That icon switches to this tab. Its behaviour depends on
-   the **Files panel icon** setting (see below).
+2. Or, from any other tab, click the folder icon in the Files panel. That icon switches to this tab. It does
+   nothing while this tab is showing, and the **Files panel icon** setting decides whether it grays or hides.
 
 Printing and file actions are OctoPrint's own. The plugin changes only where the window is
 shown.
 
 ## The eight settings
 
-Find them under **Settings > Upload Manager Tab**. Defaults are the values the plugin ships with.
+Find them under **Settings > Upload Manager Tab**. Defaults are the values the plugin ships with. A change shows
+at once, with no reload or restart. **Save** keeps it, and **Close** without saving undoes it.
 (proof: `get_settings_defaults` in `octoprint_uploadmanagertab/__init__.py`; labels from
 `octoprint_uploadmanagertab/templates/uploadmanagertab_settings.jinja2`)
 
@@ -61,10 +62,10 @@ Find them under **Settings > Upload Manager Tab**. Defaults are the values the p
 
 - Hide by pattern does not change the Files panel or the copy dialog.
 - Remember view is per browser.
-- The Files panel and the copy dialog are unchanged.
+- OctoPrint 1.11 has no storage selector, so Remember view keeps only the folder and list style there.
 
 ## Check it works
 
 1. Open the **Upload Manager** tab. The file list should load inside the tab, not in a pop-up.
-2. Turn **Show Size column** off in Settings, save, and confirm the Size column disappears. Turn it back on.
+2. Turn **Show Size column** off in Settings. The Size column disappears at once. Turn it back on.
 3. If a check fails, go to [troubleshooting.md](troubleshooting.md).
