@@ -1,4 +1,5 @@
-# OctoPrint-UploadManagerTab
+[![Usage Statistics](https://github.com/synman/OctoPluginStats/actions/workflows/get-data.yaml/badge.svg)](https://synman.github.io/OctoPluginStats/#uploadmanagertabContainer)
+# Upload Manager Tab Plugin for Octoprint
 
 Shows OctoPrint's Upload Manager in a tab instead of a dialog.
 
@@ -7,25 +8,17 @@ window into its own **Upload Manager** tab, so your printer's files stay one cli
 covering the page. It adds no new file features. Printing, moving and removing files all work the way
 OctoPrint already does them.
 
-## Screenshots
+![The Upload Manager in its own tab](docs/images/live20-tab.png)
 
-**Stock OctoPrint 2.0**
+Here are some of Upload Manager Tab's capabilities:
 
-![Upload Manager tab on stock OctoPrint 2.0](docs/images/live20-tab.png)
-
-![Upload Manager Tab settings on stock OctoPrint 2.0](docs/images/live20-settings.png)
-
-**OctoPrint 1.11.8 with UI Customizer, on a CNC machine**
-
-![Upload Manager tab on a CNC machine](docs/images/qbp-octo-tab.png)
-
-![Upload Manager Tab settings on a CNC machine](docs/images/qbp-octo-settings.png)
-
-**OctoPrint 1.11.8 with UI Customizer, on a laser**
-
-![Upload Manager tab on a laser](docs/images/atom-octo-tab.png)
-
-![Upload Manager Tab settings on a laser](docs/images/atom-octo-settings.png)
+* Shows OctoPrint's bundled Upload Manager in a tab, with nothing covering the page
+* Stretches the file list to fill the tab across, down, or both
+* Hides names you never want to see, such as `@eaDir` on a NAS share, using simple patterns
+* Reopens your last folder and list style when you come back
+* Shows or hides the Uploaded, Last Printed and Size columns
+* Grays or hides the Files panel's folder icon
+* Works on OctoPrint 1.11 and 2.0, and with UI Customizer
 
 ## Prerequisites
 
@@ -102,6 +95,26 @@ Update `docs/operators-guide.md` when `get_settings_defaults` or the settings te
 
 Open an issue or a pull request on GitHub. Keep changes to the plugin's behaviour in step with the
 guides in `docs/`, and keep the bundled Upload Manager's behaviour out of this plugin.
+
+## Screenshots
+
+**Stock OctoPrint 2.0**
+
+![Upload Manager tab on stock OctoPrint 2.0](docs/images/live20-tab.png)
+
+![Upload Manager Tab settings on stock OctoPrint 2.0](docs/images/live20-settings.png)
+
+**OctoPrint 1.11.8 with UI Customizer, on a CNC machine**
+
+![Upload Manager tab on a CNC machine](docs/images/qbp-octo-tab.png)
+
+![Upload Manager Tab settings on a CNC machine](docs/images/qbp-octo-settings.png)
+
+**OctoPrint 1.11.8 with UI Customizer, on a laser**
+
+![Upload Manager tab on a laser](docs/images/atom-octo-tab.png)
+
+![Upload Manager Tab settings on a laser](docs/images/atom-octo-settings.png)
 
 ## License
 
